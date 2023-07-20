@@ -6,7 +6,6 @@ import 'package:praktikum_lesson/screens/home_page/widgets/gridview_items_widget
 import 'package:praktikum_lesson/screens/home_page/widgets/show_coast_banner_widget.dart';
 import 'package:praktikum_lesson/utils/app_colors.dart';
 import 'package:praktikum_lesson/utils/app_icons.dart';
-import 'package:praktikum_lesson/utils/app_images.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
