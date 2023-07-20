@@ -8,7 +8,13 @@ import 'package:praktikum_lesson/utils/app_colors.dart';
 import 'package:praktikum_lesson/utils/app_icons.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final String title;
+  final String password;
+  const HomePage({
+    super.key,
+    required this.title,
+    required this.password,
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -24,10 +30,14 @@ class _HomePageState extends State<HomePage> {
         clipBehavior: Clip.none,
         children: [
           AppBar(
-              elevation: 0,
-              toolbarHeight: 120,
-              backgroundColor: const Color.fromRGBO(68, 144, 255, 1),
-              title: const AppBarTitleWidget()),
+            elevation: 0,
+            toolbarHeight: 120,
+            backgroundColor: const Color.fromRGBO(68, 144, 255, 1),
+            title: AppBarTitleWidget(
+              name: widget.title,
+              password: widget.password,
+            ),
+          ),
           Positioned(
             top: 165,
             bottom: 0,

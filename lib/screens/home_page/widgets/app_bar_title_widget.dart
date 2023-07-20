@@ -4,7 +4,13 @@ import 'package:praktikum_lesson/utils/app_icons.dart';
 import 'package:praktikum_lesson/utils/app_images.dart';
 
 class AppBarTitleWidget extends StatelessWidget {
-  const AppBarTitleWidget({super.key});
+  final String name;
+  final String password;
+  const AppBarTitleWidget({
+    super.key,
+    required this.name,
+    required this.password,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +27,19 @@ class AppBarTitleWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 12),
-        const Column(
+        Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Дарья Халай',
-              style: TextStyle(
+              name,
+              style: const TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 15,
               ),
             ),
             Text(
-              'ID: 2132489',
-              style: TextStyle(
+              'ID: $password',
+              style: const TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
               ),
